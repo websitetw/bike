@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>自行車設團網</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #1e88e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-left: 5px solid #1e88e5;
+            padding-left: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #1e88e5;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    🚴‍♂️ 自行車設團網
+</header>
+
+<div class="container">
+
+    <!-- 活動發布區 -->
+    <div class="section">
+        <h2>📅 活動發布</h2>
+        <input type="text" placeholder="活動名稱">
+        <input type="date">
+        <textarea rows="4" placeholder="活動內容 / 路線 / 注意事項"></textarea>
+        <button>發布活動</button>
+    </div>
+
+    <!-- 照片區 -->
+    <div class="section">
+        <h2>📸 活動照片</h2>
+        <div class="photo-grid">
+            <img src="https://picsum.photos/300/200?1">
+            <img src="https://picsum.photos/300/200?2">
+            <img src="https://picsum.photos/300/200?3">
+            <img src="https://picsum.photos/300/200?4">
+        </div>
+    </div>
+
+    <!-- 留言區 -->
+    <div class="section">
+        <h2>💬 留言討論區</h2>
+
+        <div class="commentbox"></div>
+        <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+        <script>
+            commentBox('5671439357181952-proj')
+        </script>
+
+    </div>
+
+</div>
+
+</body>
+</html>
