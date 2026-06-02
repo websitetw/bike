@@ -133,11 +133,11 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV3KnBxzMys3GoX1VukwyWQv
     rows.forEach(row => {
         let cols = row.split(",");
 
-        let name = cols[1] || "";
-        let phone = cols[2] || "";
-
+        let time = cols[1] || "";
+        let name = cols[2] || "";
+        let ppl = cols[3] || "";
         if(name){
-            html += `<li>${name} ｜ ${phone}</li>`;
+            html += `<li>${time} ｜ ${name}</li> ｜ ${ppl}</li>`;
         }
     });
 
