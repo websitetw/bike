@@ -135,8 +135,9 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV3KnBxzMys3GoX1VukwyWQv
         let time = cols[0] || "";
         let name = cols[1] || "";
         let ppl = cols[2] || "";
+        let comment = cols[3] || "";
         if(name){
-            html += `<li>${time} ｜ ${name} ｜ ${ppl}</li>`;
+            html += `<li>${time} ｜ ${name} ｜ ${ppl} ｜ ${comment}</li>`;
         }
     });
 
