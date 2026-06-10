@@ -9,7 +9,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
 
-            /* 背景圖 */
             background-image: url("backg.jpg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -46,6 +45,46 @@
             padding-left: 10px;
         }
 
+        /* ===== 圖片固定框（新增整理）===== */
+        .img-box {
+            width: 320px;
+            height: 220px;
+            margin: 10px auto;
+            overflow: hidden;
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== 下載連結統一風格 ===== */
+        .link-box {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link-box a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #1e88e5;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-box a:hover {
+            background: #1565c0;
+        }
+
+        /* ===== 你的相簿網格（保留優化）===== */
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -55,6 +94,7 @@
         .photo-grid img {
             width: 100%;
             border-radius: 8px;
+            object-fit: cover;
         }
     </style>
 </head>
